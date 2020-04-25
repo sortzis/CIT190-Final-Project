@@ -1,0 +1,66 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Game</title>    
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap" rel="stylesheet">
+<style>
+   body{
+        background: url('media/background.jpg');
+        background-image: cover;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        font-family: 'Lexend Giga', sans-serif;
+        font-size: 30px;
+   }
+    h1{
+        text-align: center;
+        color:blanchedalmond;
+        text-shadow: 3px 3px darkgreen;
+    }
+    button{
+        width: 100px;
+        height: 70px;
+        background-color: darkgreen;
+        border: 2px solid blanchedalmond;
+        color: blanchedalmond;
+        font-weight:1000;
+        text-align:center;
+        font-family: 'Lexend Giga', sans-serif;
+        font-size: 20px;
+        margin: 20px;
+    }
+    button.hover{
+        background-color: blanchedalmond;
+        color: darkgreen;
+    }
+    div {
+        text-align: center;
+    }
+    canvas {
+        border: 3px solid blanchedalmond;
+    }
+    footer {
+        text-align:center;
+        font-size: 15px;
+        color: blanchedalmond;
+        text-shadow: 2px 2px darkgreen;
+    }
+</style>
+</head>
+<body>
+<h1><span style='border: 5px darkgreen solid; border-radius: 20px; background-color: rgba(144, 140, 140, 0.472);'>Frog Dinner</span></h1>
+<div style = "margin-top: 100px";>
+    <button id="start" onclick="startGame()">Start Game</button>
+</div>
+<div id="canvasDiv">
+    <canvas id="myCanvas"> Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+<div>
+        <button id="playAgain" onclick="location=URL">Play Again</button>
+    </div>
+<footer>Samantha Sortzi, 2020 NMC &copy;</footer>
+<script src="js/canvasGame.js"></script>
+</body>
+</html>

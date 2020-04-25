@@ -1,0 +1,30 @@
+body {
+    font-family: 'Lexend Giga', sans-serif;
+    background:url('../media/termBackground.jpg');
+    background-size:100%;
+    background-repeat:no-repeat;
+    text-align:center;
+}
+header{
+    font-size: 30px;
+    text-align: center;
+    text-shadow: 2px 2px white;
+}
+button {
+    width: 250px;
+    height: 200px;
+    background-color: rgba(255, 112, 196, 0.712);
+    font-weight: bold;
+    font-family: 'Lexend Giga', sans-serif;
+    font-size: 20px;
+    text-shadow: 1px 1px white;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+footer {
+    font-size: 15px;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    padding: 10px;
+}

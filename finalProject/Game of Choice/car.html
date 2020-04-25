@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Car Driver</title>
+<link href="css/car.css" rel="stylesheet"/>
+</head>
+<body>
+<article>
+<section>
+<div id="container">
+    <img alt="car" src="media/car.png" id="car"/>
+</div>
+</section>
+<section style="background-color:rgba(61, 61, 248, 0.678);padding-top:5px;padding-bottom:10px;height:100px;">
+<p style="text-align:center;">
+    <button id="down">Car Drives Down</button>
+    <button id="up">Car Drives Up</button>
+    <button id="left">Car Drives Left</button>
+    <button id="right">Car Drives Right</button>
+    <button id="stop">Car Stops Driving</button>
+</p>
+</section>
+<script>
+var id;
+var posX=0;
+var posY=0;
+var elem = document.getElementById("car");
+
+document.getElementById("down").addEventListener("click",function(){
+    var id = setInterval(frame, 5);
+    posY = elem.y;
+    posX = elem.x;
+    function frame() {
+        document.getElementById("stop").addEventListener("click",function(){
+            clearInterval(id);});
+        if(posY>=450) {
+            clearInterval(id);
+        } else {
+            posY++;
+            elem.style.top = posY + 'px';
+            document.getElementById("xCoord").value=elem.x;
+            document.getElementById("yCoord").value=elem.y;
+        }
+    }
+});
+
+document.getElementById("up").addEventListener("click",function() {
+  var id = setInterval(frame, 5);
+  posY=elem.y;
+  posX=elem.x; 
+  function frame() {
+    document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+    if (posY<=50) {
+      clearInterval(id);
+    } else {
+      posY--; 
+      elem.style.top = posY + 'px'; 
+      document.getElementById("xCoord").value=elem.x;
+      document.getElementById("yCoord").value=elem.y;
+    }
+  }
+});
+
+document.getElementById("right").addEventListener("click",function() {
+  var id = setInterval(frame, 5);
+  posY=elem.y;
+  posX=elem.x; 
+  function frame() {
+    document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+    if (posX >= 1400) {
+      clearInterval(id);
+    } else {
+      posX++; 
+      elem.style.left = posX + 'px'; 
+      document.getElementById("xCoord").value=elem.x;
+      document.getElementById("yCoord").value=elem.y;
+    }
+  }
+});
+
+document.getElementById("left").addEventListener("click",function() {
+  var id = setInterval(frame, 5);
+  posY=elem.y;
+  posX=elem.x; 
+  function frame() {
+    document.getElementById("stop").addEventListener("click",function(){clearInterval(id);});
+    if (posX<=50) {
+      clearInterval(id);
+    } else {
+      posX--; 
+      elem.style.left = posX + 'px'; 
+      document.getElementById("xCoord").value=elem.x;
+      document.getElementById("yCoord").value=elem.y;
+    }
+  }
+});
+</script>
+<div id="coords">
+<p>X Coordinate:<input type="text" id="xCoord"/><br>
+Y Coordinate:<input type="text" id="yCoord"/></p>
+</div>
+</article>
+</body>
+</html>

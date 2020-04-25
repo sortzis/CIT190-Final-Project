@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend+Giga&display=swap" rel="stylesheet">
+<style>
+    h1,p {
+        font-family: 'Lexend Giga', sans-serif;
+        font-size: 30px;
+        color: tan;
+        text-shadow: 2px 2px black;
+        text-align: center;
+    }
+    section {
+        width: 1280px;
+        height: 853px;
+        border: 3px solid black;
+    }
+
+</style>
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+ <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css"><script>
+   $(function()
+     {
+         $("#MoveMe1").draggable();
+         $("#MoveMe2").draggable();
+         $("#MoveMe3").draggable();
+         $("#MoveMe4").draggable();
+         $("#MoveMe5").draggable();
+         $("#MoveMe6").draggable();           
+     });
+</script>
+<body>
+<header>
+    <h1>Puzzle Game</h1>
+    <p>Fit the pieces in the square</p>
+    <section>
+        <p id="MoveMe1"><img src="media/cat1.png" /></p>
+        <p id="MoveMe2"><img src="media/cat2.png" /></p>
+        <p id="MoveMe3"><img src="media/cat3.png" /></p>
+        <p id="MoveMe4"><img src="media/cat4.png" /></p>
+        <p id="MoveMe5"><img src="media/cat5.png" /></p>
+        <p id="MoveMe6"><img src="media/cat6.png" /></p>
+    </section>
+</header>
+</body>
+</head>
+</html>
